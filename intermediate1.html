@@ -5,6 +5,38 @@
 	<title>Intermediate 1</title>
 </head>
 <body>
-	
+
+
+	<script>
+		function HotelConstructor(name, nights, nightsinput){
+			this.name = name;
+			this.nights = nights;
+			this.nightsinput = nightsinput;
+			this.checkAvailability = function(){
+				return this.nights - this.nightsinput;
+			}
+		}
+
+		var randomnum = Math.floor(Math.random()*10);
+		var randomnum2 = Math.floor(Math.random()*10);
+		var randomnum3 = Math.floor(Math.random()*10);
+		var input = prompt("Enter the numbers of nights", "nights here");
+		var holydayInnHotel = new HotelConstructor("HolydayInn", randomnum, input);
+		var mariotthotel = new HotelConstructor("MariottHotel", randomnum2, input);
+		var Hilton = new HotelConstructor("Hilton", randomnum3, input);
+		
+		var hotel = [holydayInnHotel, mariotthotel, Hilton];
+
+		for (i=0; i < hotel.length; i++){
+			if(input<=hotel[i].nights){
+				document.write("I'll reserve " + hotel[i].nightsinput + " nights in the hotel " + hotel[i].name + "<br>");
+			}
+			else{
+				document.write("Sorry, no free rooms for " + hotel[i].nightsinput + " nights in hotel " + hotel[i].name + "<br>");
+			}
+		}
+
+
+	</script>
 </body>
 </html>
