@@ -15,12 +15,15 @@ body{
 .displayline input{
 	width: 100%;
 	height: 50px;
+	border: 1px solid black;
+	margin-bottom: 15px;
 }
 .btn button:hover{
 	background: lightgrey;
 
 }
 .btn button{
+	border: 1px solid black;
 	margin: 2px;
 	background: none;
 	height: 75px;
