@@ -5,6 +5,36 @@
 	<title>Basic 3</title>
 </head>
 <body>
-	
+	<script>
+		function PersonalInfo(name,surname,age) {
+			this.name = name;
+			this.surname = surname;
+			this.age = age;
+			this.sentence = function() {
+				return ("Hi I am " + this.name +" "+ this.surname + " I am " + this.age + " years old and I am a future programmer.");
+			}
+		}
+			// sentence();
+			var a = new PersonalInfo("Simon","Blaha",28);
+			var b = new PersonalInfo("Benjamin","Schneider",21);
+			var c = new PersonalInfo("Ahmad","Taktak",29);
+			document.write(a.sentence()+"<br>");
+			document.write(b.sentence()+"<br>");
+			document.write(c.sentence());
+
+			// function personalInformation() {
+			// 	var name = prompt("Enter your name");
+			// 	var surname = prompt("Enter your surname");
+			// 	var age = prompt("Enter your age");
+
+			// 	var sentence = "Hi I am " + name +" "+ surname + " I am " + age + " years old and I am a future programmer."
+
+			// 	return sentence;
+			// }
+
+			// document.write(personalInformation());
+
+
+	</script>
 </body>
 </html>
